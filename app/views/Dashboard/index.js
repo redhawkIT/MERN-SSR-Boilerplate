@@ -24,9 +24,6 @@ class Dashboard extends React.Component {
   static defaultProps = {
     models: []
   }
-  componentDidMount () {
-    setInterval(() => this.props.forceRequest(), 2000)
-  }
   render (
     { models } = this.props
   ) {

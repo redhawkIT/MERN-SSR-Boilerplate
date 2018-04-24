@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router'
 import { environment } from './services'
 const { ENV } = environment
 
-import Template from './views/Template/Template'
+import Template from './views/Template'
 /*
 CODE SPLITTING:
 This weird hackery is the most clean way to split components into different JS

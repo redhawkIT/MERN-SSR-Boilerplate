@@ -14,7 +14,7 @@ RESTful MODELS (and their dummy data generators)
 For express-restify-mongoose
 */
 import Config, { dummy as dummyConfigs } from './config'
-import User, { dummy as dummyUser } from './user'
+import User, { dummy as dummyUsers } from './user'
 import Model, { dummy as dummyModels } from './model'
 
 export { Config, User, Model }

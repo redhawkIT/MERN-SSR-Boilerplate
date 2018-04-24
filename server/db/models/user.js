@@ -44,4 +44,3 @@ export const dummy = (min = 1, ids = {}, developer = {}) => {
     }
   })
 }
-export { dummyUsers }

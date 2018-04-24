@@ -10,30 +10,27 @@ import api from '../../services'
 import { Card, CardTitle, CardText } from 'react-md'
 
 @compose(
-  connect(state => ({
-    room: state.db.room
-  })),
-  connectRequest((props) => api.get('room', { id: props.params.id }))
+  connect(state => ({ model: state.db.model })),
+  connectRequest((props) => api.get('model', { id: props.params.id }))
 )
-class Room extends React.Component {
+class Model extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
       id: PropTypes.string.isRequired
     })
   }
   static defaultProps = {
-    room: {}
+    model: {}
   }
-  render ({ room } = this.props) {
-
+  render ({ model } = this.props) {
     return (
       <article>
-        <Helmet title='Room' />
+        <Helmet title={`Model ${model._id || 'Loading...'}`} />
         <Card className='md-block-centered'>
           <CardTitle title={`Room: ${model.name}`} subtitle={`In ${model.name}`} />
           <CardText>
             <pre>
-              <code>{JSON.stringify(room)}</code>
+              <code>{JSON.stringify(model)}</code>
             </pre>
           </CardText>
         </Card>
@@ -42,4 +39,4 @@ class Room extends React.Component {
   }
 }
 
-export default Room
+export default Model

@@ -4,7 +4,7 @@ import faker from 'faker'
 
 const ModelSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  date: { type: Date, default: Date.now() }
+  date: { type: Date, default: Date.now() },
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 })
 ModelSchema.plugin(autoref, [
@@ -34,4 +34,3 @@ export const dummy = (min = 1, ids = {}, developer = {}) => {
     }
   })
 }
-export { dummyModels }
