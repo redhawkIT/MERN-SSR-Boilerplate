@@ -1,0 +1,22 @@
+article {
+  padding: 8px;
+  @media screen and (min-width: 992px) {
+    padding: 16px;
+  }
+  .page {
+    margin: 16px 4px;
+    max-width: 1280px;
+    @media screen and (min-width: 992px) {
+      margin: 16px auto;
+    }
+  }
+}
+
+//  Page layouts
+// article {
+//   margin: 16px 4px;
+//   max-width: 960px;
+//   @media screen and (min-width: 992px) {
+//     margin: 16px auto;
+//   }
+// }

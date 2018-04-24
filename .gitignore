@@ -1,0 +1,12 @@
+node_modules
+nodemon.json
+npm-debug.log
+.tmp
+.idea
+public
+compiled
+*.swp
+.vscode
+config/*
+security
+logs
